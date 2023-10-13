@@ -1,4 +1,4 @@
-<h1 align="center"> Upload-AI-Server </h1>
+<h1 align="center"> M2 - Programação Back-End </h1>
 
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
@@ -20,19 +20,43 @@
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- React
 - Typescript
 - Node.js
 - Prisma
-- Web Assembly
-- FFMPEG
 - Zod
-- Shadcn
-- Tailwind CSS
 
 ## 💻 Projeto
 
-O Upload-AI é uma aplicação que permite ao usuário realizar descrição e títulos para videos utilizados o modelos de IA da Open AI Whisper e ChatGPT.
+O Projeto M2 - Programação Back-End é uma API Restfull que permite realizar um CRUD (Create, Read, Update and Delete) para uma base de clientes.
+
+O projeto possui as seguintes rotas:
+GET http://localhost:3000/clients
+Descrição: Retorna a lista dos clientes registrados.
+Body:Nenhum.
+
+DELETE http://localhost:3000/clients
+Descrição: Retorna status code 200. A propriedade 'id' é obrigatória.
+Body:
+{
+	"id":"b3dfe05d-3172-43ed-8146-7aab93f4afd0"
+}
+
+PATCH http://localhost:3000/clients
+Descrição: Modifica um cliente com determina id. Retorna o cliente com dados modificados. A propriedade id é obrigatório, porém 'name' e 'lastName' são opcionais.
+Body:
+{
+	"id":"956f1ccd-663d-4be3-aa63-5f37eb5f0a15",
+	"name":"Edgar",
+	"lastName":"Rocha de Arruda"
+}
+
+CREATE http://localhost:3000/clients
+Descrição: Criação de novos clientes. Retorna um objeto do cliente criado. As propriedades 'name' e 'lastName' são obrigatórias.
+Body:
+{
+	"name":"Rita de Cássia",
+	"lastName":"Rocha"
+}
 
 ## :memo: Licença
 
